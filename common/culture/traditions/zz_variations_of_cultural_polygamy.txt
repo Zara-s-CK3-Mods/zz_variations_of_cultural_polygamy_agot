@@ -40,7 +40,9 @@
 	}
 
 	parameters = {
-		number_of_spouses = 2
+		number_of_consorts_empire = 2
+		number_of_consorts_hegemony = 2
+		number_of_spouses =  2
 		romance_scheme_bonus_vs_spouse = yes
 	}
 	
@@ -92,7 +94,9 @@ tradition_zz_cultural_polygamy_three_wives = {
 	}
 
 	parameters = {
-		number_of_spouses = 3
+		number_of_consorts_empire = 3
+		number_of_consorts_hegemony = 3
+		number_of_spouses =  3
 		romance_scheme_bonus_vs_spouse = yes
 	}
 	
@@ -144,7 +148,9 @@ tradition_zz_cultural_polygamy_four_wives = {
 	}
 
 	parameters = {
-		number_of_spouses = 4
+		number_of_consorts_empire = 4
+		number_of_consorts_hegemony = 4
+		number_of_spouses =  4
 		romance_scheme_bonus_vs_spouse = yes
 	}
 	
@@ -196,7 +202,9 @@ tradition_zz_cultural_polygamy_five_wives = {
 	}
 
 	parameters = {
-		number_of_spouses = 5
+		number_of_consorts_empire = 5
+		number_of_consorts_hegemony = 5
+		number_of_spouses =  5
 		romance_scheme_bonus_vs_spouse = yes
 	}
 	
@@ -248,7 +256,9 @@ tradition_zz_cultural_polygamy_nine_wives = {
 	}
 
 	parameters = {
-		number_of_spouses = 9
+		number_of_consorts_empire = 9
+		number_of_consorts_hegemony = 9
+		number_of_spouses =  9
 		romance_scheme_bonus_vs_spouse = yes
 	}
 	
