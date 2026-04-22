@@ -40,10 +40,17 @@
 	}
 
 	parameters = {
-		number_of_consorts_empire = 2
-		number_of_consorts_hegemony = 2
-		number_of_spouses =  2
+		number_of_consorts_hegemony = 22
+		number_of_consorts = 2
+		number_of_spouses = 2
 		romance_scheme_bonus_vs_spouse = yes
+	}
+	partners = {
+		number_of_spouses =  2
+		number_of_consorts_by_tier = {
+			hegemony = 2
+			empire = 2
+		}
 	}
 	
 	cost = {
@@ -94,10 +101,17 @@ tradition_zz_cultural_polygamy_three_wives = {
 	}
 
 	parameters = {
-		number_of_consorts_empire = 3
-		number_of_consorts_hegemony = 3
-		number_of_spouses =  3
+		number_of_consorts_hegemony = 33
+		number_of_consorts = 3
+		number_of_spouses = 3
 		romance_scheme_bonus_vs_spouse = yes
+	}
+	partners = {
+		number_of_spouses =  3
+		number_of_consorts_by_tier = {
+			hegemony = 3
+			empire = 3
+		}
 	}
 	
 	cost = {
@@ -148,10 +162,17 @@ tradition_zz_cultural_polygamy_four_wives = {
 	}
 
 	parameters = {
-		number_of_consorts_empire = 4
-		number_of_consorts_hegemony = 4
-		number_of_spouses =  4
+		number_of_consorts_hegemony = 44
+		number_of_consorts = 4
+		number_of_spouses = 4
 		romance_scheme_bonus_vs_spouse = yes
+	}
+	partners = {
+		number_of_spouses =  4
+		number_of_consorts_by_tier = {
+			hegemony = 4
+			empire = 4
+		}
 	}
 	
 	cost = {
@@ -202,10 +223,17 @@ tradition_zz_cultural_polygamy_five_wives = {
 	}
 
 	parameters = {
-		number_of_consorts_empire = 5
-		number_of_consorts_hegemony = 5
-		number_of_spouses =  5
+		number_of_consorts_hegemony = 55
+		number_of_consorts = 5
+		number_of_spouses = 5
 		romance_scheme_bonus_vs_spouse = yes
+	}
+	partners = {
+		number_of_spouses =  5
+		number_of_consorts_by_tier = {
+			hegemony = 5
+			empire = 5
+		}
 	}
 	
 	cost = {
@@ -256,10 +284,18 @@ tradition_zz_cultural_polygamy_nine_wives = {
 	}
 
 	parameters = {
-		number_of_consorts_empire = 9
-		number_of_consorts_hegemony = 9
-		number_of_spouses =  9
+		number_of_consorts_hegemony = 99
+		number_of_consorts = 9
+		number_of_spouses = 9
 		romance_scheme_bonus_vs_spouse = yes
+	}
+	partners = {
+		number_of_spouses =  9
+		number_of_consorts = 9
+		number_of_consorts_by_tier = {
+			hegemony = 99
+			empire = 77
+		}
 	}
 	
 	cost = {
