@@ -12,12 +12,47 @@
 	}
 	
 	can_pick = {
-		always = yes
+		custom_tooltip = {
+			text = only_one_marriage_tradition_allowed
+			trigger_if = {
+				limit = {
+					OR = {
+						NOT = { exists = scope:replacing }
+						NOR = {
+							scope:replacing = culture_tradition:tradition_monogamous
+							scope:replacing = culture_tradition:tradition_concubines
+							scope:replacing = culture_tradition:tradition_polygamous
+							scope:replacing = culture_tradition:tradition_zz_cultural_polygamy_three_wives
+							scope:replacing = culture_tradition:tradition_zz_cultural_polygamy_four_wives
+							scope:replacing = culture_tradition:tradition_zz_cultural_polygamy_five_wives
+							scope:replacing = culture_tradition:tradition_zz_cultural_polygamy_nine_wives
+							scope:replacing = culture_tradition:tradition_zz_cultural_polygamy_fifteen_wives
+						}
+					}
+				}
+				NOR = {
+					culture_tradition:tradition_monogamous = { is_in_list = traits }
+					culture_tradition:tradition_concubines = { is_in_list = traits }
+					culture_tradition:tradition_polygamous = { is_in_list = traits }
+					culture_tradition:tradition_zz_cultural_polygamy_three_wives = { is_in_list = traits }
+					culture_tradition:tradition_zz_cultural_polygamy_four_wives = { is_in_list = traits }
+					culture_tradition:tradition_zz_cultural_polygamy_five_wives = { is_in_list = traits }
+					culture_tradition:tradition_zz_cultural_polygamy_nine_wives = { is_in_list = traits }
+					culture_tradition:tradition_zz_cultural_polygamy_fifteen_wives = { is_in_list = traits }
+				}
+			}
+		}
 	}
 	
 	can_pick_for_hybridization = {
 		custom_tooltip = {
 			text = only_one_marriage_tradition_allowed
+			NOT = { # Only blocks polygamous to avoid duplicate warnings, but is blocked by concubines
+				culture_tradition:tradition_monogamous = { is_in_list = traits }
+			}
+			NOT = { # Only blocks polygamous to avoid duplicate warnings, but is blocked by concubines
+				culture_tradition:tradition_concubines = { is_in_list = traits }
+			}
 			NOT = { # Only blocks polygamous to avoid duplicate warnings, but is blocked by concubines
 				culture_tradition:tradition_polygamous = { is_in_list = traits }
 			}
@@ -33,26 +68,17 @@
 			NOT = { # Only blocks polygamous to avoid duplicate warnings, but is blocked by concubines
 				culture_tradition:tradition_zz_cultural_polygamy_three_wives = { is_in_list = traits }
 			}
-			NOT = { # Only blocks polygamous to avoid duplicate warnings, but is blocked by concubines
-				culture_tradition:tradition_zz_cultural_polygamy_two_wives = { is_in_list = traits }
-			}
 		}
 	}
 
-	parameters = {
-		number_of_consorts_hegemony = 22
-		number_of_consorts = 2
-		number_of_spouses = 2
-		romance_scheme_bonus_vs_spouse = yes
-	}
 	partners = {
-		number_of_spouses =  2
-		number_of_consorts_by_tier = {
-			hegemony = 2
-			empire = 2
-		}
+		number_of_spouses = 2
+		number_of_consorts = 2
 	}
-	
+
+	parameters = {
+		romance_scheme_bonus_vs_spouse = yes
+	}	
 	cost = {
 		prestige = 1000
 	}
@@ -76,12 +102,47 @@ tradition_zz_cultural_polygamy_three_wives = {
 	}
 	
 	can_pick = {
-		always = yes
+		custom_tooltip = {
+			text = only_one_marriage_tradition_allowed
+			trigger_if = {
+				limit = {
+					OR = {
+						NOT = { exists = scope:replacing }
+						NOR = {
+							scope:replacing = culture_tradition:tradition_monogamous
+							scope:replacing = culture_tradition:tradition_concubines
+							scope:replacing = culture_tradition:tradition_polygamous
+							scope:replacing = culture_tradition:tradition_zz_cultural_polygamy_two_wives
+							scope:replacing = culture_tradition:tradition_zz_cultural_polygamy_four_wives
+							scope:replacing = culture_tradition:tradition_zz_cultural_polygamy_five_wives
+							scope:replacing = culture_tradition:tradition_zz_cultural_polygamy_nine_wives
+							scope:replacing = culture_tradition:tradition_zz_cultural_polygamy_fifteen_wives
+						}
+					}
+				}
+				NOR = {
+					culture_tradition:tradition_monogamous = { is_in_list = traits }
+					culture_tradition:tradition_concubines = { is_in_list = traits }
+					culture_tradition:tradition_polygamous = { is_in_list = traits }
+					culture_tradition:tradition_zz_cultural_polygamy_two_wives = { is_in_list = traits }
+					culture_tradition:tradition_zz_cultural_polygamy_four_wives = { is_in_list = traits }
+					culture_tradition:tradition_zz_cultural_polygamy_five_wives = { is_in_list = traits }
+					culture_tradition:tradition_zz_cultural_polygamy_nine_wives = { is_in_list = traits }
+					culture_tradition:tradition_zz_cultural_polygamy_fifteen_wives = { is_in_list = traits }
+				}
+			}
+		}
 	}
 	
 	can_pick_for_hybridization = {
 		custom_tooltip = {
 			text = only_one_marriage_tradition_allowed
+			NOT = { # Only blocks polygamous to avoid duplicate warnings, but is blocked by concubines
+				culture_tradition:tradition_monogamous = { is_in_list = traits }
+			}
+			NOT = { # Only blocks polygamous to avoid duplicate warnings, but is blocked by concubines
+				culture_tradition:tradition_concubines = { is_in_list = traits }
+			}
 			NOT = { # Only blocks polygamous to avoid duplicate warnings, but is blocked by concubines
 				culture_tradition:tradition_polygamous = { is_in_list = traits }
 			}
@@ -100,20 +161,15 @@ tradition_zz_cultural_polygamy_three_wives = {
 		}
 	}
 
-	parameters = {
-		number_of_consorts_hegemony = 33
-		number_of_consorts = 3
+	partners = {
 		number_of_spouses = 3
+		number_of_consorts = 3
+	}
+
+	parameters = {
 		romance_scheme_bonus_vs_spouse = yes
 	}
-	partners = {
-		number_of_spouses =  3
-		number_of_consorts_by_tier = {
-			hegemony = 3
-			empire = 3
-		}
-	}
-	
+
 	cost = {
 		prestige = 1000
 	}
@@ -137,12 +193,47 @@ tradition_zz_cultural_polygamy_four_wives = {
 	}
 	
 	can_pick = {
-		always = yes
+		custom_tooltip = {
+			text = only_one_marriage_tradition_allowed
+			trigger_if = {
+				limit = {
+					OR = {
+						NOT = { exists = scope:replacing }
+						NOR = {
+							scope:replacing = culture_tradition:tradition_monogamous
+							scope:replacing = culture_tradition:tradition_concubines
+							scope:replacing = culture_tradition:tradition_polygamous
+							scope:replacing = culture_tradition:tradition_zz_cultural_polygamy_two_wives
+							scope:replacing = culture_tradition:tradition_zz_cultural_polygamy_three_wives
+							scope:replacing = culture_tradition:tradition_zz_cultural_polygamy_five_wives
+							scope:replacing = culture_tradition:tradition_zz_cultural_polygamy_nine_wives
+							scope:replacing = culture_tradition:tradition_zz_cultural_polygamy_fifteen_wives
+						}
+					}
+				}
+				NOR = {
+					culture_tradition:tradition_monogamous = { is_in_list = traits }
+					culture_tradition:tradition_concubines = { is_in_list = traits }
+					culture_tradition:tradition_polygamous = { is_in_list = traits }
+					culture_tradition:tradition_zz_cultural_polygamy_two_wives = { is_in_list = traits }
+					culture_tradition:tradition_zz_cultural_polygamy_three_wives = { is_in_list = traits }
+					culture_tradition:tradition_zz_cultural_polygamy_five_wives = { is_in_list = traits }
+					culture_tradition:tradition_zz_cultural_polygamy_nine_wives = { is_in_list = traits }
+					culture_tradition:tradition_zz_cultural_polygamy_fifteen_wives = { is_in_list = traits }
+				}
+			}
+		}
 	}
 	
 	can_pick_for_hybridization = {
 		custom_tooltip = {
 			text = only_one_marriage_tradition_allowed
+			NOT = { # Only blocks polygamous to avoid duplicate warnings, but is blocked by concubines
+				culture_tradition:tradition_monogamous = { is_in_list = traits }
+			}
+			NOT = { # Only blocks polygamous to avoid duplicate warnings, but is blocked by concubines
+				culture_tradition:tradition_concubines = { is_in_list = traits }
+			}
 			NOT = { # Only blocks polygamous to avoid duplicate warnings, but is blocked by concubines
 				culture_tradition:tradition_polygamous = { is_in_list = traits }
 			}
@@ -161,19 +252,15 @@ tradition_zz_cultural_polygamy_four_wives = {
 		}
 	}
 
-	parameters = {
-		number_of_consorts_hegemony = 44
-		number_of_consorts = 4
+	partners = {
 		number_of_spouses = 4
+		number_of_consorts = 4
+	}
+
+	parameters = {
 		romance_scheme_bonus_vs_spouse = yes
 	}
-	partners = {
-		number_of_spouses =  4
-		number_of_consorts_by_tier = {
-			hegemony = 4
-			empire = 4
-		}
-	}
+
 	
 	cost = {
 		prestige = 1000
@@ -198,12 +285,47 @@ tradition_zz_cultural_polygamy_five_wives = {
 	}
 	
 	can_pick = {
-		always = yes
+		custom_tooltip = {
+			text = only_one_marriage_tradition_allowed
+			trigger_if = {
+				limit = {
+					OR = {
+						NOT = { exists = scope:replacing }
+						NOR = {
+							scope:replacing = culture_tradition:tradition_monogamous
+							scope:replacing = culture_tradition:tradition_concubines
+							scope:replacing = culture_tradition:tradition_polygamous
+							scope:replacing = culture_tradition:tradition_zz_cultural_polygamy_two_wives
+							scope:replacing = culture_tradition:tradition_zz_cultural_polygamy_three_wives
+							scope:replacing = culture_tradition:tradition_zz_cultural_polygamy_four_wives
+							scope:replacing = culture_tradition:tradition_zz_cultural_polygamy_nine_wives
+							scope:replacing = culture_tradition:tradition_zz_cultural_polygamy_fifteen_wives
+						}
+					}
+				}
+				NOR = {
+					culture_tradition:tradition_monogamous = { is_in_list = traits }
+					culture_tradition:tradition_concubines = { is_in_list = traits }
+					culture_tradition:tradition_polygamous = { is_in_list = traits }
+					culture_tradition:tradition_zz_cultural_polygamy_two_wives = { is_in_list = traits }
+					culture_tradition:tradition_zz_cultural_polygamy_three_wives = { is_in_list = traits }
+					culture_tradition:tradition_zz_cultural_polygamy_four_wives = { is_in_list = traits }
+					culture_tradition:tradition_zz_cultural_polygamy_nine_wives = { is_in_list = traits }
+					culture_tradition:tradition_zz_cultural_polygamy_fifteen_wives = { is_in_list = traits }
+				}
+			}
+		}
 	}
 	
 	can_pick_for_hybridization = {
 		custom_tooltip = {
 			text = only_one_marriage_tradition_allowed
+			NOT = { # Only blocks polygamous to avoid duplicate warnings, but is blocked by concubines
+				culture_tradition:tradition_monogamous = { is_in_list = traits }
+			}
+			NOT = { # Only blocks polygamous to avoid duplicate warnings, but is blocked by concubines
+				culture_tradition:tradition_concubines = { is_in_list = traits }
+			}
 			NOT = { # Only blocks polygamous to avoid duplicate warnings, but is blocked by concubines
 				culture_tradition:tradition_polygamous = { is_in_list = traits }
 			}
@@ -222,18 +344,13 @@ tradition_zz_cultural_polygamy_five_wives = {
 		}
 	}
 
-	parameters = {
-		number_of_consorts_hegemony = 55
-		number_of_consorts = 5
-		number_of_spouses = 5
-		romance_scheme_bonus_vs_spouse = yes
-	}
 	partners = {
-		number_of_spouses =  5
-		number_of_consorts_by_tier = {
-			hegemony = 5
-			empire = 5
-		}
+		number_of_spouses = 5
+		number_of_consorts = 5
+	}
+
+	parameters = {
+		romance_scheme_bonus_vs_spouse = yes
 	}
 	
 	cost = {
@@ -259,12 +376,47 @@ tradition_zz_cultural_polygamy_nine_wives = {
 	}
 	
 	can_pick = {
-		always = yes
+		custom_tooltip = {
+			text = only_one_marriage_tradition_allowed
+			trigger_if = {
+				limit = {
+					OR = {
+						NOT = { exists = scope:replacing }
+						NOR = {
+							scope:replacing = culture_tradition:tradition_monogamous
+							scope:replacing = culture_tradition:tradition_concubines
+							scope:replacing = culture_tradition:tradition_polygamous
+							scope:replacing = culture_tradition:tradition_zz_cultural_polygamy_two_wives
+							scope:replacing = culture_tradition:tradition_zz_cultural_polygamy_three_wives
+							scope:replacing = culture_tradition:tradition_zz_cultural_polygamy_four_wives
+							scope:replacing = culture_tradition:tradition_zz_cultural_polygamy_five_wives
+							scope:replacing = culture_tradition:tradition_zz_cultural_polygamy_fifteen_wives
+						}
+					}
+				}
+				NOR = {
+					culture_tradition:tradition_monogamous = { is_in_list = traits }
+					culture_tradition:tradition_concubines = { is_in_list = traits }
+					culture_tradition:tradition_polygamous = { is_in_list = traits }
+					culture_tradition:tradition_zz_cultural_polygamy_two_wives = { is_in_list = traits }
+					culture_tradition:tradition_zz_cultural_polygamy_three_wives = { is_in_list = traits }
+					culture_tradition:tradition_zz_cultural_polygamy_four_wives = { is_in_list = traits }
+					culture_tradition:tradition_zz_cultural_polygamy_five_wives = { is_in_list = traits }
+					culture_tradition:tradition_zz_cultural_polygamy_fifteen_wives = { is_in_list = traits }
+				}
+			}
+		}
 	}
 	
 	can_pick_for_hybridization = {
 		custom_tooltip = {
 			text = only_one_marriage_tradition_allowed
+			NOT = { # Only blocks polygamous to avoid duplicate warnings, but is blocked by concubines
+				culture_tradition:tradition_monogamous = { is_in_list = traits }
+			}
+			NOT = { # Only blocks polygamous to avoid duplicate warnings, but is blocked by concubines
+				culture_tradition:tradition_concubines = { is_in_list = traits }
+			}
 			NOT = { # Only blocks polygamous to avoid duplicate warnings, but is blocked by concubines
 				culture_tradition:tradition_polygamous = { is_in_list = traits }
 			}
@@ -283,21 +435,107 @@ tradition_zz_cultural_polygamy_nine_wives = {
 		}
 	}
 
-	parameters = {
-		number_of_consorts_hegemony = 99
-		number_of_consorts = 9
-		number_of_spouses = 9
-		romance_scheme_bonus_vs_spouse = yes
-	}
 	partners = {
-		number_of_spouses =  9
+		number_of_spouses = 9
 		number_of_consorts = 9
-		number_of_consorts_by_tier = {
-			hegemony = 99
-			empire = 77
+	}
+
+	parameters = {
+		romance_scheme_bonus_vs_spouse = yes
+	}	
+	cost = {
+		prestige = 1000
+	}
+	
+	ai_will_do = { 
+		value = -1
+
+	}
+}
+tradition_zz_cultural_polygamy_fifteen_wives = {
+	category = ritual
+	
+	layers = {
+		0 = diplo
+		1 = mena
+		4 = greeting.dds
+	}
+	
+	is_shown = {
+		always = yes
+	}
+	
+	can_pick = {
+		custom_tooltip = {
+			text = only_one_marriage_tradition_allowed
+			trigger_if = {
+				limit = {
+					OR = {
+						NOT = { exists = scope:replacing }
+						NOR = {
+							scope:replacing = culture_tradition:tradition_monogamous
+							scope:replacing = culture_tradition:tradition_concubines
+							scope:replacing = culture_tradition:tradition_polygamous
+							scope:replacing = culture_tradition:tradition_zz_cultural_polygamy_two_wives
+							scope:replacing = culture_tradition:tradition_zz_cultural_polygamy_three_wives
+							scope:replacing = culture_tradition:tradition_zz_cultural_polygamy_four_wives
+							scope:replacing = culture_tradition:tradition_zz_cultural_polygamy_five_wives
+							scope:replacing = culture_tradition:tradition_zz_cultural_polygamy_nine_wives
+						}
+					}
+				}
+				NOR = {
+					culture_tradition:tradition_monogamous = { is_in_list = traits }
+					culture_tradition:tradition_concubines = { is_in_list = traits }
+					culture_tradition:tradition_polygamous = { is_in_list = traits }
+					culture_tradition:tradition_zz_cultural_polygamy_two_wives = { is_in_list = traits }
+					culture_tradition:tradition_zz_cultural_polygamy_three_wives = { is_in_list = traits }
+					culture_tradition:tradition_zz_cultural_polygamy_four_wives = { is_in_list = traits }
+					culture_tradition:tradition_zz_cultural_polygamy_five_wives = { is_in_list = traits }
+					culture_tradition:tradition_zz_cultural_polygamy_nine_wives = { is_in_list = traits }
+				}
+			}
 		}
 	}
 	
+	can_pick_for_hybridization = {
+		custom_tooltip = {
+			text = only_one_marriage_tradition_allowed
+			NOT = { # Only blocks polygamous to avoid duplicate warnings, but is blocked by concubines
+				culture_tradition:tradition_monogamous = { is_in_list = traits }
+			}
+			NOT = { # Only blocks polygamous to avoid duplicate warnings, but is blocked by concubines
+				culture_tradition:tradition_concubines = { is_in_list = traits }
+			}
+			NOT = { # Only blocks polygamous to avoid duplicate warnings, but is blocked by concubines
+				culture_tradition:tradition_polygamous = { is_in_list = traits }
+			}
+			NOT = { # Only blocks polygamous to avoid duplicate warnings, but is blocked by concubines
+				culture_tradition:tradition_zz_cultural_polygamy_five_wives = { is_in_list = traits }
+			}
+			NOT = { # Only blocks polygamous to avoid duplicate warnings, but is blocked by concubines
+				culture_tradition:tradition_zz_cultural_polygamy_four_wives = { is_in_list = traits }
+			}
+			NOT = { # Only blocks polygamous to avoid duplicate warnings, but is blocked by concubines
+				culture_tradition:tradition_zz_cultural_polygamy_three_wives = { is_in_list = traits }
+			}
+			NOT = { # Only blocks polygamous to avoid duplicate warnings, but is blocked by concubines
+				culture_tradition:tradition_zz_cultural_polygamy_two_wives = { is_in_list = traits }
+			}
+			NOT = { # Only blocks polygamous to avoid duplicate warnings, but is blocked by concubines
+				culture_tradition:tradition_zz_cultural_polygamy_nine_wives = { is_in_list = traits }
+			}
+		}
+	}
+
+	partners = {
+		number_of_spouses = 15
+		number_of_consorts = 15
+	}
+
+	parameters = {
+		romance_scheme_bonus_vs_spouse = yes
+	}	
 	cost = {
 		prestige = 1000
 	}

@@ -1,0 +1,21 @@
+﻿# Tells other mods (Secrets of Ambrosius) that this mod is active.
+on_game_start = {
+	on_actions = { zz_variations_of_cultural_polygamy_set_mod_flag }
+}
+
+# Also for saves started before this mod was added
+yearly_global_pulse = {
+	on_actions = { zz_variations_of_cultural_polygamy_set_mod_flag }
+}
+
+zz_variations_of_cultural_polygamy_set_mod_flag = {
+	effect = {
+		if = {
+			limit = { NOT = { has_global_variable = zz_cultural_polygamy_mod } }
+			set_global_variable = {
+				name = zz_cultural_polygamy_mod
+				value = yes
+			}
+		}
+	}
+}
